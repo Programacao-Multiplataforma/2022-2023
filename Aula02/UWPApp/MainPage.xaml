@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="UWPApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="98" Width="250">
+
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="Valor1:" Margin="5,7,198,70"/>
+        <TextBlock TextWrapping="Wrap" Text="Valor2:" Margin="0,49,188,29"/>
+        <TextBox x:Name="tbValor1" TextWrapping="Wrap" Margin="47,0,124,65"/>
+        <TextBox x:Name="tbValor2" TextWrapping="Wrap" Margin="47,43,124,22" IsReadOnly="True"/>
+        <Button x:Name="btnMover" Content="Mover" Margin="155,26,0,0" VerticalAlignment="Top" Click="btnMover_Click"/>
+    </Grid>
+</Page>
