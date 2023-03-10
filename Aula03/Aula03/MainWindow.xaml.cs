@@ -39,24 +39,35 @@ namespace Aula03
 
         private void btnLimpar_Click(object sender, RoutedEventArgs e)
         {
-            //tbValor1.Text = "";
-            //tbValor2.Text = "";
-            //tbResultado.Text = "";
-            tbValor1.Clear();
-            tbValor2.Clear();
-            tbResultado.Clear();
+            // condicionar o eliminação dos valores à confirmação por parte do utilizador
+            MessageBoxResult opcao = MessageBox.Show(
+                "Tem a certeza que pretende eliminar os números?",
+                "Limpar números",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question
+            );
 
-            //ComboBox
-            cbResultados.Items.Clear();
+            if (opcao == MessageBoxResult.Yes)
+            {
+                //tbValor1.Text = "";
+                //tbValor2.Text = "";
+                //tbResultado.Text = "";
+                tbValor1.Clear();
+                tbValor2.Clear();
+                tbResultado.Clear();
 
-            //ListBox
-            lbResultados.Items.Clear();
+                //ComboBox
+                cbResultados.Items.Clear();
 
-            //ListView
-            lvValores.Items.Clear();
+                //ListBox
+                lbResultados.Items.Clear();
 
-            //TreeView
-            tvResultados.Items.Clear();
+                //ListView
+                lvValores.Items.Clear();
+
+                //TreeView
+                tvResultados.Items.Clear();
+            }
         }
 
         //EXTRA AULA: EXERCÍCIO 1
