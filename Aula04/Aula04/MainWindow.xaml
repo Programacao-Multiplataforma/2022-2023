@@ -1,0 +1,33 @@
+﻿<Window x:Class="Aula04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula04"
+        mc:Ignorable="d"
+                Title="Lista de figuras" Height="228" Width="335">
+    <Grid>
+        <Menu  Margin="0,0,0,153">
+            <MenuItem Header="Figuras">
+                <MenuItem x:Name="FigurasAdicionar" Header="Adicionar" Click="FigurasAdicionar_Click"/>
+                <MenuItem x:Name="FigurasRemover" Header="Remover" Click="FigurasRemover_Click"/>
+                <Separator/>
+                <MenuItem x:Name="FigurasSair" Header="Sair" Click="FigurasSair_Click"/>
+            </MenuItem>
+            <MenuItem Header="Quadro">
+                <MenuItem x:Name="QuadroLimpar" Header="Limpar" Click="QuadroLimpar_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock HorizontalAlignment="Left" Margin="17,59,0,0" TextWrapping="Wrap" Text="Descrição" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbFiguras" Margin="10,80,232,17" SelectionChanged="lbFiguras_SelectionChanged">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Adicionar" Click="FigurasAdicionar_Click" />
+                    <MenuItem Header="Remover" Click="FigurasRemover_Click" />
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="183,62,0,0" TextWrapping="Wrap" Text="Representação" VerticalAlignment="Top"/>
+        <Canvas x:Name="canvasRepresentacao" Margin="132,83,19,17" Background="LightGray"/>
+    </Grid>
+</Window>
