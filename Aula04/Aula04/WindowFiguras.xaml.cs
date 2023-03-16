@@ -7,7 +7,8 @@ namespace Aula04
     /// </summary>
     public partial class WindowFiguras : Window
     {
-        public string Figura { get; private set; }
+        public string Figura { get; private set; } // propriedade para "partilhar" o valor selecionado na combobox
+
         public WindowFiguras()
         {
             InitializeComponent();
@@ -15,16 +16,17 @@ namespace Aula04
 
         private void btnInserir_Click(object sender, RoutedEventArgs e)
         {
-            if (cbFiguras.SelectedIndex != -1)
+            if (cbFiguras.SelectedIndex != -1) // existe algum elemento selecionado?
             {
                 Figura = cbFiguras.Text;
 
-                this.DialogResult = true;
+                this.DialogResult = true; // fecha a janela e devolve o valor TRUE
             }
             else
             {
-                this.DialogResult = false;
+                this.DialogResult = false;  // fecha a janela e devolve o valor FALSE
             }
+            //this.Close();
         }
     }
 }

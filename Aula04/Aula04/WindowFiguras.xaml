@@ -13,6 +13,6 @@
             <ComboBoxItem Content="Retangulo"/>
             <ComboBoxItem Content="Circulo"/>
         </ComboBox>
-        <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="135,85,0,0" VerticalAlignment="Top" Click="btnInserir_Click"/>
+        <Button x:Name="btnInserir" x:FieldModifier="private" Content="Inserir" HorizontalAlignment="Left" Margin="135,85,0,0" VerticalAlignment="Top" Click="btnInserir_Click"/>
     </Grid>
 </Window>

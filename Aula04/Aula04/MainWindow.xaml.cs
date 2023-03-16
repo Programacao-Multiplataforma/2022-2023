@@ -105,6 +105,7 @@ namespace Aula04
                 if (MessageBox.Show("Tem a certeza?", "Apagar Figura", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
                 {
                     lbFiguras.Items.Remove(lbFiguras.SelectedItem);
+                    // lbFiguras.Items.RemoveAt(lbFiguras.SelectedIndex); // alternativo
                 }
             }
             else
