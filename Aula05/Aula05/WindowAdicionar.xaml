@@ -1,0 +1,27 @@
+﻿<Window x:Class="Aula05.WindowAdicionar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula05"
+        mc:Ignorable="d"
+        Title="Adicionar Figura" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Height="184" Width="276">
+    <Grid>
+        <GroupBox Header="Figura" Margin="10,10,156,69">
+            <StackPanel Height="53">
+                <RadioButton x:Name="rbQuadrado" x:FieldModifier="private" Content="Quadrado" IsChecked="True"/>
+                <RadioButton x:Name="rbRetangulo" x:FieldModifier="private" Content="Retangulo"/>
+                <RadioButton x:Name="rbCirculo" x:FieldModifier="private" Content="Circulo"/>
+            </StackPanel>
+        </GroupBox>
+        <TextBlock HorizontalAlignment="Left" Margin="138,28,0,0" TextWrapping="Wrap" Text="Largura:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="138,56,0,0" TextWrapping="Wrap" Text="Altura:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbLargura" x:FieldModifier="private" HorizontalAlignment="Left" Margin="186,27,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="58" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="tbAltura" x:FieldModifier="private" HorizontalAlignment="Left" Margin="186,55,0,0" TextWrapping="Wrap" Text="?" VerticalAlignment="Top" Width="58" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnAceitar" x:FieldModifier="private" Content="Aceitar" HorizontalAlignment="Left" Margin="75,112,0,0" VerticalAlignment="Top" Click="btnAceitar_Click" Width="66" Height="25"/>
+        <Button x:Name="btnCancelar" x:FieldModifier="private" Content="Cancelar" HorizontalAlignment="Left" Margin="151,112,0,0" VerticalAlignment="Top" Click="btnCancelar_Click" Width="64" Height="25"/>
+    </Grid>
+</Window>
