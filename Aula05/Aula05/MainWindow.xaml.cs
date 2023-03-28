@@ -24,10 +24,12 @@ namespace Aula05
 
             if (dlg.ShowDialog() == true)
             {
-                //lbFiguras.Items.Add(dlg.FiguraNova.Nome);
-                lbFiguras.Items.Add(dlg.FiguraNova);
-
                 Lista.Add(dlg.FiguraNova);
+
+                //lbFiguras.Items.Add(dlg.FiguraNova.Nome);
+                //lbFiguras.Items.Add(dlg.FiguraNova);
+                AtualizaFiguras();
+
             }
         }
 
@@ -38,6 +40,15 @@ namespace Aula05
             sbiDimensoes.Content = "Largura: " + fig.Largura + " Altura: " + fig.Altura;
         }
 
+        private void AtualizaFiguras()
+        {
+            lbFiguras.Items.Clear();
+
+            foreach(Figura item in Lista)
+            {
+                lbFiguras.Items.Add(item);
+            }
+        }
         //TPC: Desenhar figura selecionada com as respetivas dimensões e validar
         //a largura e altura inseridas pelo utilizador
     }
