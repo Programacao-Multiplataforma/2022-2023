@@ -3,15 +3,12 @@ using System.Collections.Generic;
 
 namespace Aula06
 {
-    //PASSO 1: Criar delegate
-    public delegate void MetodosComInt(int valor);
-
     public class ModelClassificacoes
     {
         //Armazenamento dos dados
         public List<string> ListaNotas { get; private set; }
 
-        //PASSO 1: Criar delegate
+        //PASSO 1: Criar delegate // movido para o ficheiro Delegates.cs
         //public delegate void MetodosComInt(int valor);
 
         //PASSO 2: Criar event
