@@ -8,4 +8,7 @@ namespace Aula06
 {
     //necessário às mensagens (notificações) do Model para as Views
     public delegate void MetodosComInt(int valor);
+
+    // extra - para as notificações de erro
+    public delegate void MetodosComString(string mensagem);
 }

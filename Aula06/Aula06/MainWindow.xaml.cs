@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Aula06
 {
@@ -27,6 +15,15 @@ namespace Aula06
 
             //Ligação à App
             app = App.Current as App;
+
+            //Subscrição de um método no evento do Model
+            // leitura da notificação de erro na submissão do valor
+            app.Model_Classificacoes.NotaComValorErrado += Model_Classificacoes_NotaComValorErrado;
+        }
+
+        private void Model_Classificacoes_NotaComValorErrado(string mensagem)
+        {
+            MessageBox.Show(mensagem, "ERRO", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

@@ -15,6 +15,7 @@ namespace Aula06
             app = App.Current as App;
 
             //Subscrição de um método no evento do Model
+            // leitura da notificação de novo valor inserido
             app.Model_Classificacoes.NotaInserida += Model_Classificacoes_NotaInserida;
         }
 
