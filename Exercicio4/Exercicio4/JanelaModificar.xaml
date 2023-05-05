@@ -1,0 +1,49 @@
+﻿<Window x:Class="Exercicio4.JanelaModificar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercicio4"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        Title="Modificar Dados" Height="183" Width="496">
+    <StackPanel Orientation="Vertical">
+        <Grid Margin="10">
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="5" />
+                    <Setter Property="HorizontalAlignment" Value="Right" />
+                </Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="5" />
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Número :"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Nome :"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Curso :"/>
+            <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbNumero" Text="" Width="98"/>
+            <TextBox Grid.Column="1" Grid.Row="1" x:Name="tbNome" Text="" Width="236"/>
+            <TextBox Grid.Column="1" Grid.Row="2" x:Name="tbCurso" Text="" Width="370"/>
+        </Grid>
+        <WrapPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+            <WrapPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10" />
+                </Style>
+            </WrapPanel.Resources>
+            <Button x:Name="btnAlterar" Content="Alterar"  Width="61" Click="btnAlterar_Click"/>
+            <Button x:Name="btnCancelar" Content="Cancelar"  Width="61" Click="btnCancelar_Click"/>
+        </WrapPanel>
+    </StackPanel>
+</Window>
