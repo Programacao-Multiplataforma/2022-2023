@@ -1,0 +1,17 @@
+﻿<Window x:Class="Aula10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula10"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+         Title="Gestor de Bateria - 0%" Height="180" Width="410">
+    <StackPanel Orientation="Horizontal" Margin="5">
+        <Button x:Name="btnDescarregar" Content="-" HorizontalAlignment="Left" VerticalAlignment="Center" Width="79" Height="139" FontSize="72" Click="btnDescarregar_Click"/>
+        <Separator Width="5" Visibility="Hidden"/>
+        <ProgressBar x:Name="pbBateria" HorizontalAlignment="Left" Height="139" VerticalAlignment="Center" Width="232" Background="#FFE6E6E6"/>
+        <Separator Width="5" Visibility="Hidden"/>
+        <Button x:Name="btnCarregar" Content="+" HorizontalAlignment="Left" VerticalAlignment="Center" Width="69" Height="139" FontSize="72" Click="btnCarregar_Click"/>
+    </StackPanel>
+</Window>
