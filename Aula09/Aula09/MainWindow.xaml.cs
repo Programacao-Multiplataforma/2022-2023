@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Aula09
 {
@@ -42,7 +30,8 @@ namespace Aula09
             //foreach (ModelDepartamento dep in app.M_Escola.Departamentos)
             //Utilização de inumerador/iterador - Permite abstração da estrutura de dados do Model
             foreach (ModelDepartamento dep in _app.M_Escola)
-                cbDepartamentos.Items.Add(dep.Designacao);
+                //cbDepartamentos.Items.Add(dep.Designacao); // versão em que apenas é usada a designação (string)
+                cbDepartamentos.Items.Add(dep); // versão em que é usado o departamento (obriga a alteração do template - XAML)
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -54,7 +43,10 @@ namespace Aula09
         private void cbDepartamentos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Atualização da View com dados do Model
-            sbiNDocentes.Content = "N.º Docentes: " + _app.M_Escola.ObterDocentes(cbDepartamentos.SelectedIndex);
+            //sbiNDocentes.Content = "N.º Docentes: " + _app.M_Escola.ObterDocentes(cbDepartamentos.SelectedIndex);
+            
+            // esta versão tira partido de a informação do Departamento estar toda na Combobox
+            sbiNDocentes.Content = "N.º Docentes: " + (cbDepartamentos.SelectedItem as ModelDepartamento).Docentes;
         }
     }
 }
