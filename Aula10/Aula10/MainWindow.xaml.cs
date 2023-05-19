@@ -37,7 +37,7 @@ namespace Aula10
             }
             catch (OperacaoInvalidaException erro)
             {
-                MessageBox.Show(erro.Message, "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(erro.Message, "Alerta", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

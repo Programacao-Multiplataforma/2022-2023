@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:Aula10"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-         Title="Gestor de Bateria - 0%" Height="180" Width="410">
+        SizeToContent="WidthAndHeight"
+        Title="Gestor de Bateria - 0%" Height="140" Width="370">
     <StackPanel Orientation="Horizontal" Margin="5">
-        <Button x:Name="btnDescarregar" Content="-" HorizontalAlignment="Left" VerticalAlignment="Center" Width="79" Height="139" FontSize="72" Click="btnDescarregar_Click"/>
+        <Button x:Name="btnDescarregar" Content="-" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" FontSize="30" Click="btnDescarregar_Click"/>
         <Separator Width="5" Visibility="Hidden"/>
-        <ProgressBar x:Name="pbBateria" HorizontalAlignment="Left" Height="139" VerticalAlignment="Center" Width="232" Background="#FFE6E6E6"/>
+        <ProgressBar x:Name="pbBateria" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="232" Background="#FFE6E6E6"/>
         <Separator Width="5" Visibility="Hidden"/>
-        <Button x:Name="btnCarregar" Content="+" HorizontalAlignment="Left" VerticalAlignment="Center" Width="69" Height="139" FontSize="72" Click="btnCarregar_Click"/>
+        <Button x:Name="btnCarregar" Content="+" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" FontSize="30" Click="btnCarregar_Click"/>
     </StackPanel>
 </Window>
